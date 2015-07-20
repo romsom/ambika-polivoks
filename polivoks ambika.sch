@@ -16210,6 +16210,7 @@ Based on the following sources:
 <part name="C7" library="rcl" deviceset="C-US" device="025-025X050" value="100n"/>
 <part name="C17" library="rcl" deviceset="C-US" device="025-025X050" value="100n"/>
 <part name="GND8" library="SparkFun" deviceset="GND" device=""/>
+<part name="R3" library="rcl" deviceset="R-US_" device="0204/7" value="1k"/>
 </parts>
 <sheets>
 <sheet>
@@ -16345,6 +16346,7 @@ Based on the following sources:
 <instance part="C17" gate="G$1" x="307.34" y="132.08"/>
 <instance part="IC11" gate="SUPPLY" x="261.62" y="137.16"/>
 <instance part="GND8" gate="1" x="210.82" y="-35.56"/>
+<instance part="R3" gate="G$1" x="71.12" y="96.52" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -17329,9 +17331,8 @@ Based on the following sources:
 <segment>
 <wire x1="71.12" y1="104.14" x2="73.66" y2="104.14" width="0.1524" layer="91"/>
 <pinref part="Q4" gate="G1" pin="B"/>
-<wire x1="71.12" y1="104.14" x2="71.12" y2="91.44" width="0.1524" layer="91"/>
-<pinref part="IC7" gate="G$1" pin="PC0(ADC0)"/>
-<wire x1="71.12" y1="91.44" x2="68.58" y2="91.44" width="0.1524" layer="91"/>
+<pinref part="R3" gate="G$1" pin="2"/>
+<wire x1="71.12" y1="101.6" x2="71.12" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -17353,6 +17354,13 @@ Based on the following sources:
 <pinref part="IC7" gate="G$1" pin="PC1(ADC1)"/>
 <wire x1="68.58" y1="88.9" x2="71.12" y2="88.9" width="0.1524" layer="91"/>
 <label x="71.12" y="88.9" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$23" class="0">
+<segment>
+<pinref part="IC7" gate="G$1" pin="PC0(ADC0)"/>
+<wire x1="71.12" y1="91.44" x2="68.58" y2="91.44" width="0.1524" layer="91"/>
+<pinref part="R3" gate="G$1" pin="1"/>
 </segment>
 </net>
 </nets>
